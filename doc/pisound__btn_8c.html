@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Efekt gitarowy: Dokumentacja pliku C:/Users/Bartek/Downloads/Efekt gitarowy/pisound_btn.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Efekt gitarowy
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2c12105386bcc5c3935feab96f296a41.html">Downloads</a></li><li class="navelem"><a class="el" href="dir_a31eba057885a428b49a62fb46c2129f.html">Efekt gitarowy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Wyliczenia</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku pisound_btn.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/timerfd.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Wyliczenia</h2></td></tr>
+<tr class="memitem:aa7e3758913b7cae0044aba646d712752"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a> { <br />
+&#160;&#160;<a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752a75bda04f70337e05810bcb26b144ffc7">A_DOWN</a> = 0, 
+<a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752a55dd70b2ebb6617dfa0f77741feb121e">A_UP</a>, 
+<a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752a1f2325dad5e8a554c1c86f52c68eb0ff">A_CLICK</a>, 
+<a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752a9425782d34cb7f1159073d834f20ab28">A_HOLD</a>, 
+<br />
+&#160;&#160;<a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752a247d5c3e9f4547f48a6301a4513617bd">A_COUNT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa7e3758913b7cae0044aba646d712752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stany przycisku  <a href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">Więcej...</a><br /></td></tr>
+<tr class="separator:aa7e3758913b7cae0044aba646d712752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:af72d1d97dc13cf63df34ff90f6943af3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#af72d1d97dc13cf63df34ff90f6943af3">read_config</a> (const char path_name)</td></tr>
+<tr class="memdesc:af72d1d97dc13cf63df34ff90f6943af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wczytujaca plik konfiguracyjny z podanej sciezki  <a href="pisound__btn_8c.html#af72d1d97dc13cf63df34ff90f6943af3">Więcej...</a><br /></td></tr>
+<tr class="separator:af72d1d97dc13cf63df34ff90f6943af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf8cda3f29f45c1ef0068b8a36b4b70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#aedf8cda3f29f45c1ef0068b8a36b4b70">get_default_action_and_script</a> (const char default_path_name)</td></tr>
+<tr class="memdesc:aedf8cda3f29f45c1ef0068b8a36b4b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wczytujaca domyslna konfiguracje  <a href="pisound__btn_8c.html#aedf8cda3f29f45c1ef0068b8a36b4b70">Więcej...</a><br /></td></tr>
+<tr class="separator:aedf8cda3f29f45c1ef0068b8a36b4b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735156f9fe816cba920b2fafd436c9bd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a735156f9fe816cba920b2fafd436c9bd">get_action_script_path</a> (enum <a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a> action)</td></tr>
+<tr class="memdesc:a735156f9fe816cba920b2fafd436c9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja zwracajaca dlugosc sciezki pliku z konfiguracja  <a href="pisound__btn_8c.html#a735156f9fe816cba920b2fafd436c9bd">Więcej...</a><br /></td></tr>
+<tr class="separator:a735156f9fe816cba920b2fafd436c9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87b3a37bbf21a038985cc656070adcc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#af87b3a37bbf21a038985cc656070adcc">execute_action</a> (enum <a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a> action)</td></tr>
+<tr class="memdesc:af87b3a37bbf21a038985cc656070adcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykrycie stanu przycisku i rozpoczecie zwiazanej z nim akcji  <a href="pisound__btn_8c.html#af87b3a37bbf21a038985cc656070adcc">Więcej...</a><br /></td></tr>
+<tr class="separator:af87b3a37bbf21a038985cc656070adcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab898ec827edcb9e509a731c6e4b8efd0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#ab898ec827edcb9e509a731c6e4b8efd0">gpio_export</a> (int pin)</td></tr>
+<tr class="memdesc:ab898ec827edcb9e509a731c6e4b8efd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wlaczenie podanego pinu systemowego interfejsu GPIO  <a href="pisound__btn_8c.html#ab898ec827edcb9e509a731c6e4b8efd0">Więcej...</a><br /></td></tr>
+<tr class="separator:ab898ec827edcb9e509a731c6e4b8efd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6bb376f385b063e158df412031347a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a0a6bb376f385b063e158df412031347a">gpio_unexport</a> (int pin)</td></tr>
+<tr class="memdesc:a0a6bb376f385b063e158df412031347a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wylaczenie podanego pinu systemowego interfejsu GPIO  <a href="pisound__btn_8c.html#a0a6bb376f385b063e158df412031347a">Więcej...</a><br /></td></tr>
+<tr class="separator:a0a6bb376f385b063e158df412031347a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2d954aabf712ebbd470f257f4d4590"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a0a2d954aabf712ebbd470f257f4d4590">gpio_open</a> (int pin)</td></tr>
+<tr class="memdesc:a0a2d954aabf712ebbd470f257f4d4590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobranie indeksu pinu i jego walidacja  <a href="pisound__btn_8c.html#a0a2d954aabf712ebbd470f257f4d4590">Więcej...</a><br /></td></tr>
+<tr class="separator:a0a2d954aabf712ebbd470f257f4d4590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5652e7890114f5fc040c4901f126f124"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a5652e7890114f5fc040c4901f126f124">gpio_close</a> (int fd)</td></tr>
+<tr class="memdesc:a5652e7890114f5fc040c4901f126f124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zakonczenie strumienia z dostepem do pinu  <a href="pisound__btn_8c.html#a5652e7890114f5fc040c4901f126f124">Więcej...</a><br /></td></tr>
+<tr class="separator:a5652e7890114f5fc040c4901f126f124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glowna funkcja programu  <a href="pisound__btn_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Więcej...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:ae606879ee04247bcf63bc50f25ee650d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#ae606879ee04247bcf63bc50f25ee650d">MAX_PATH_LENGTH</a> = 100</td></tr>
+<tr class="memdesc:ae606879ee04247bcf63bc50f25ee650d"><td class="mdescLeft">&#160;</td><td class="mdescRight">D�ugo�� sciezki wczytywanego skryptu  <a href="pisound__btn_8c.html#ae606879ee04247bcf63bc50f25ee650d">Więcej...</a><br /></td></tr>
+<tr class="separator:ae606879ee04247bcf63bc50f25ee650d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4822d97f1f1dccb1f00e7cee897b7ac6"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a4822d97f1f1dccb1f00e7cee897b7ac6">Skrypt1</a> = BASE_SCRIPTS_DIR &quot;/Skrypt1.sh&quot;</td></tr>
+<tr class="memdesc:a4822d97f1f1dccb1f00e7cee897b7ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Domyslna konfiguracja przycisku  <a href="pisound__btn_8c.html#a4822d97f1f1dccb1f00e7cee897b7ac6">Więcej...</a><br /></td></tr>
+<tr class="separator:a4822d97f1f1dccb1f00e7cee897b7ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0afe24b30203fa38642c051a894021d8"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pisound__btn_8c.html#a0afe24b30203fa38642c051a894021d8">g_config_path</a> [<a class="el" href="pisound__btn_8c.html#ae606879ee04247bcf63bc50f25ee650d">MAX_PATH_LENGTH</a>+1] = &quot;/etc/pisound.conf&quot;</td></tr>
+<tr class="memdesc:a0afe24b30203fa38642c051a894021d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sciezka do pliku konfiguracyjnego  <a href="pisound__btn_8c.html#a0afe24b30203fa38642c051a894021d8">Więcej...</a><br /></td></tr>
+<tr class="separator:a0afe24b30203fa38642c051a894021d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
+<a id="aa7e3758913b7cae0044aba646d712752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e3758913b7cae0044aba646d712752">&#9670;&nbsp;</a></span>action_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stany przycisku </p>
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="aa7e3758913b7cae0044aba646d712752a75bda04f70337e05810bcb26b144ffc7"></a>A_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa7e3758913b7cae0044aba646d712752a55dd70b2ebb6617dfa0f77741feb121e"></a>A_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa7e3758913b7cae0044aba646d712752a1f2325dad5e8a554c1c86f52c68eb0ff"></a>A_CLICK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa7e3758913b7cae0044aba646d712752a9425782d34cb7f1159073d834f20ab28"></a>A_HOLD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa7e3758913b7cae0044aba646d712752a247d5c3e9f4547f48a6301a4513617bd"></a>A_COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="af87b3a37bbf21a038985cc656070adcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87b3a37bbf21a038985cc656070adcc">&#9670;&nbsp;</a></span>execute_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void execute_action </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a>&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wykrycie stanu przycisku i rozpoczecie zwiazanej z nim akcji </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>Stan przycisku</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a735156f9fe816cba920b2fafd436c9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735156f9fe816cba920b2fafd436c9bd">&#9670;&nbsp;</a></span>get_action_script_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int get_action_script_path </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="pisound__btn_8c.html#aa7e3758913b7cae0044aba646d712752">action_e</a>&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja zwracajaca dlugosc sciezki pliku z konfiguracja </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>Stan przycisku</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedf8cda3f29f45c1ef0068b8a36b4b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf8cda3f29f45c1ef0068b8a36b4b70">&#9670;&nbsp;</a></span>get_default_action_and_script()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void get_default_action_and_script </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>default_path_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja wczytujaca domyslna konfiguracje </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">default_path_name</td><td>Sciezka domyslnego pliku konfiguracyjnego</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5652e7890114f5fc040c4901f126f124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5652e7890114f5fc040c4901f126f124">&#9670;&nbsp;</a></span>gpio_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int gpio_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zakonczenie strumienia z dostepem do pinu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Strumien pinu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab898ec827edcb9e509a731c6e4b8efd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab898ec827edcb9e509a731c6e4b8efd0">&#9670;&nbsp;</a></span>gpio_export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int gpio_export </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wlaczenie podanego pinu systemowego interfejsu GPIO </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>Numer pinu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a2d954aabf712ebbd470f257f4d4590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2d954aabf712ebbd470f257f4d4590">&#9670;&nbsp;</a></span>gpio_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int gpio_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pobranie indeksu pinu i jego walidacja </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>Numer pinu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a6bb376f385b063e158df412031347a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6bb376f385b063e158df412031347a">&#9670;&nbsp;</a></span>gpio_unexport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int gpio_unexport </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wylaczenie podanego pinu systemowego interfejsu GPIO </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>Numer pinu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Glowna funkcja programu </p>
+
+</div>
+</div>
+<a id="af72d1d97dc13cf63df34ff90f6943af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72d1d97dc13cf63df34ff90f6943af3">&#9670;&nbsp;</a></span>read_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void read_config </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>path_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja wczytujaca plik konfiguracyjny z podanej sciezki </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_name</td><td>Sciezka pliku konfiguracyjnego</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a0afe24b30203fa38642c051a894021d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0afe24b30203fa38642c051a894021d8">&#9670;&nbsp;</a></span>g_config_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char g_config_path[<a class="el" href="pisound__btn_8c.html#ae606879ee04247bcf63bc50f25ee650d">MAX_PATH_LENGTH</a>+1] = &quot;/etc/pisound.conf&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sciezka do pliku konfiguracyjnego </p>
+
+</div>
+</div>
+<a id="ae606879ee04247bcf63bc50f25ee650d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae606879ee04247bcf63bc50f25ee650d">&#9670;&nbsp;</a></span>MAX_PATH_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MAX_PATH_LENGTH = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D�ugo�� sciezki wczytywanego skryptu </p>
+
+</div>
+</div>
+<a id="a4822d97f1f1dccb1f00e7cee897b7ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4822d97f1f1dccb1f00e7cee897b7ac6">&#9670;&nbsp;</a></span>Skrypt1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const Skrypt1 = BASE_SCRIPTS_DIR &quot;/Skrypt1.sh&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Domyslna konfiguracja przycisku </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
